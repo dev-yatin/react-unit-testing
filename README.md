@@ -226,3 +226,10 @@ To mock request, we use mock service worker. Read doc for proper explanation
 Process of verifying code meet certain expectation without running it.
 Can help to verify type consistency, style, formatting, complexity of code, common mistakes and possible bugs
 We can use Typescript, eslint, prettier, husky and lint-staged for it.
+
+## Enzyme
+
+- Always begin with shallow. Shallow does not render all the children components, just the first level, perfect to test in isolation a React component (without state)
+- If componentDidMount or componentDidUpdate should be tested, use mount
+- If you want to test component lifecycle and children behavior, use mount
+- If you want to test children rendering with less overhead than mount and you are not interested in lifecycle methods, use render. Render is more a matter of testing the static JSX / HTML rendering of your application.
